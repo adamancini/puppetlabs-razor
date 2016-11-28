@@ -39,7 +39,10 @@ class razor::torquebox {
   } ->
 
   file { "/var/log/razor-server":
-    ensure => directory, owner => $user, group => 'root', mode => 0755
+    ensure => directory, 
+    owner => $user, 
+    group => 'root', 
+    mode  => '0755'
   } ->
 
   service { "razor-server":
