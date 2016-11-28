@@ -27,6 +27,8 @@ class razor (
   } else {
     include razor::libarchive
   }
+  
+  ensure_packages(['unzip'], {'ensure' => 'present'})
 
   # Install a JVM, since we need one
   if $java_package {
