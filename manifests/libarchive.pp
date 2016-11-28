@@ -4,7 +4,8 @@ class razor::libarchive {
       /^12/   => 'libarchive12',
       /^13/   => 'libarchive13',
       /^14/   => 'libarchive13',
-      default => undef
+      /^16/   => 'libarchive13',
+      default => 'libarchive13',
     },
     "Debian" => $operatingsystemmajrelease ? {
       '6'     => 'libarchive1',
