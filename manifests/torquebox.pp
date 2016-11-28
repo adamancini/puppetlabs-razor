@@ -32,7 +32,9 @@ class razor::torquebox {
 
   # Install an init script for the Razor torquebox install
   file { "/etc/init.d/razor-server":
-    owner   => root, group => root, mode => 0755,
+    owner   => root, 
+    group   => root, 
+    mode    => '0755',
     content => template('razor/razor-server.init.erb')
   } ->
 
